@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gra", "Gra\Gra.csproj", "{0C6758EF-3270-4868-9657-05E551859E16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C6758EF-3270-4868-9657-05E551859E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C6758EF-3270-4868-9657-05E551859E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C6758EF-3270-4868-9657-05E551859E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C6758EF-3270-4868-9657-05E551859E16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {930A7710-37F7-4BFC-93C9-C613A3405E1A}
+	EndGlobalSection
+EndGlobal
