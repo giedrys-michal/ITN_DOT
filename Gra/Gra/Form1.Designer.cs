@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlPanel = new System.Windows.Forms.Panel();
             this.btnStart = new System.Windows.Forms.Button();
-            this.lblTime = new System.Windows.Forms.Label();
+            this.tmrStoper = new System.Windows.Forms.Timer(this.components);
+            this.lblCzas = new System.Windows.Forms.Label();
+            this.tmrCzas = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // pnlPanel
@@ -50,21 +53,30 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // lblTime
+            // tmrStoper
             // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(147, 436);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(35, 13);
-            this.lblTime.TabIndex = 1;
-            this.lblTime.Text = "CZAS";
+            this.tmrStoper.Interval = 1000;
+            this.tmrStoper.Tick += new System.EventHandler(this.tmrStoper_Tick);
+            // 
+            // lblCzas
+            // 
+            this.lblCzas.AutoSize = true;
+            this.lblCzas.Location = new System.Drawing.Point(114, 427);
+            this.lblCzas.Name = "lblCzas";
+            this.lblCzas.Size = new System.Drawing.Size(43, 13);
+            this.lblCzas.TabIndex = 1;
+            this.lblCzas.Text = "00:00:0";
+            // 
+            // tmrCzas
+            // 
+            this.tmrCzas.Tick += new System.EventHandler(this.tmrCzas_Tick);
             // 
             // frmPrzeszkody
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 471);
-            this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.lblCzas);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.pnlPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -72,6 +84,7 @@
             this.Name = "frmPrzeszkody";
             this.Text = "Przeszkody";
             this.Load += new System.EventHandler(this.frmPrzeszkody_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmPrzeszkody_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,7 +94,9 @@
 
         private System.Windows.Forms.Panel pnlPanel;
         private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer tmrStoper;
+        private System.Windows.Forms.Label lblCzas;
+        private System.Windows.Forms.Timer tmrCzas;
     }
 }
 
