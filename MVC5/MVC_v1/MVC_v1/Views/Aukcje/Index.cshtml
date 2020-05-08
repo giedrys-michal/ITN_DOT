@@ -1,0 +1,51 @@
+﻿@model List<MVC_v1.Models.Aukcja>
+@{
+    ViewBag.Title = "Aukcje";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista aukcji</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Filtruj po nazwie: @Html.TextBox("nazwa")
+        <input type="submit" value="Filtruj" />
+    </p>
+}
+
+@if (Model != null)
+{
+    <table id="aukcje" width="100%">
+        <tr>
+            <td>Przedmiot</td>
+            <td>Cena</td>
+            <td>Sprzedajacy</td>
+            <td>Czas Trwania</td>
+        </tr>
+        @foreach (var aukcja in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => aukcja.przedmiot)</td>
+                <td>@Html.DisplayFor(modelItem => aukcja.cenaWywolawcza)</td>
+                <td>
+                    @if (aukcja.ceny.Count > 0)
+                    {
+                        @Html.DisplayFor(modelItem => aukcja.ceny[aukcja.ceny.Count - 1]);
+                    }
+                </td>
+                <td>@Html.DisplayFor(modelItem => aukcja.dataStart)</td>
+                <td>@Html.DisplayFor(modelItem => aukcja.dataZakonczenia)</td>
+                <td>@Html.DisplayFor(modelItem => aukcja.status)</td>
+                <td>@Html.DisplayFor(modelItem => aukcja.sprzedajacy)</td>
+        </tr>
+        }
+    </table>
+}
+else
+{
+
+    <text>Brak aukcji</text>
+
+}
+
