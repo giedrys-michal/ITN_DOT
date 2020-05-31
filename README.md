@@ -1,6 +1,12 @@
 # ITN_DOT
 Technologie .NET
 
+wymagania projektowe:
+paginacja
+testy
+entity framework
+chat hubowy
+
 HUBY:
 manager pakietów: signalR core
 dodać hub - proj -> dodaj (SiećWeb) - signalR Hub class
