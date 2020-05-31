@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "ChatZNickiem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chat z Nickiem</h2>
+
+<div class="container">
+    <p id="uczestnicy"></p>
+    <p>
+        <input type="text" id="tresc" placeholder="tresc"/>
+        <input type="text" id="nick" placeholder="nick" />
+        <input type="button" id="wyslij" value="Wyślij" />
+    </p>
+    <p>
+        <ul id="komunikaty"></ul>
+    </p>
+</div>
+@section scripts {
+    <script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+
+    <script>
+        $(function () {
+            var nick;
+            var chat = $.connection.ChatHub;
+
+            dyskusja.client.online = function (liczba) {
+                $("#uczestnicy").html("Aktualna liczba uczestników dyskusji: " + liczba);
+            };
+
+            chat.client.wyswietlWiadomosc = function (tresc, nick) {
+                var czas = new Date().toTimeString().split(' ')[0];
+                $('#komunikaty').append('<li>' + nick + '[' + czas + ']:' + tresc + '</li>');
+            };
+
+            $.connection.hub.start().done(function () {
+                $('#wyslij').click(function () {
+                    if (nick == undefined) {
+                        nick = $('#nick').val();
+                        $('#nick').prop("disabled", true);
+                        $('#nick').val("");
+                    }
+                        
+                    chat.server.wyslijZNickiem($('#tresc').val(), nick);
+                });
+            });
+        });
+
+    </script>
+}
+

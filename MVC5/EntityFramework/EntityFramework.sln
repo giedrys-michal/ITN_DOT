@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opera", "Opera\Opera.csproj", "{6EF88694-B9A2-4F31-9DE8-34E2496716B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EF88694-B9A2-4F31-9DE8-34E2496716B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EF88694-B9A2-4F31-9DE8-34E2496716B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EF88694-B9A2-4F31-9DE8-34E2496716B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EF88694-B9A2-4F31-9DE8-34E2496716B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91FC33C8-C8DE-42A9-85A4-1A84F4B469EF}
+	EndGlobalSection
+EndGlobal

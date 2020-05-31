@@ -1,0 +1,52 @@
+﻿@model IEnumerable<EntityFramework.Models.Opera>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rok)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kompozytor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dlugosc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rok)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kompozytor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dlugosc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.OperaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.OperaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.OperaID })
+        </td>
+    </tr>
+}
+
+</table>
