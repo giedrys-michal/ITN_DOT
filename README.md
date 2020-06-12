@@ -1,6 +1,9 @@
 # ITN_DOT
 Technologie .NET
 
+Migracja bazy danych:
+https://docs.microsoft.com/pl-pl/ef/ef6/modeling/code-first/migrations/?redirectedfrom=MSDN
+
 wymagania projektowe:
 paginacja
 testy
