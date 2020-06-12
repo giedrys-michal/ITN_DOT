@@ -2,7 +2,12 @@
 Technologie .NET
 
 Migracja bazy danych:
+
 https://docs.microsoft.com/pl-pl/ef/ef6/modeling/code-first/migrations/?redirectedfrom=MSDN
+
+Samouczek tutaj:
+
+https://docs.microsoft.com/pl-pl/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application#initialize-db-with-test-data
 
 wymagania projektowe:
 paginacja
