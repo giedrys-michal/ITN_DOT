@@ -1,0 +1,74 @@
+﻿@model Apteczka.Models.ApteczkaModel
+
+@{
+    ViewBag.Title = "Szczegóły";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Szczegóły Apteczki</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataUtworzenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataUtworzenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Leki)
+        </dt>
+
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Nazwa Leku</th>
+                    <th>Kategoria</th>
+                    <th>Forma</th>
+                    <th>Producent</th>
+                    <th>Ilość</th>
+                    <th>Termin Ważności</th>
+                </tr>
+                @foreach (var item in Model.Leki)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nazwa)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Kategoria)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Forma)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Producent)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ilosc)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TerminWaznosci)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edytuj", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Powrót do Apteczek", "Index")
+</p>

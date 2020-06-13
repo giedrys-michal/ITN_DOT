@@ -24,6 +24,8 @@ namespace Opera.Models
         [StringLength(150)]
         public string Kompozytor { get; set; }
         public string Dlugosc { get; set; }
+
+        // Ustawić migrację bazy danych
     }
 
     public class SprawdzRok : ValidationAttribute
