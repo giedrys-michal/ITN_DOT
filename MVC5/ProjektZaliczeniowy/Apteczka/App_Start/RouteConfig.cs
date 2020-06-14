@@ -18,12 +18,6 @@ namespace Apteczka
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-
-            routes.MapRoute(
-                name: "More",
-                url: "{controller}/{action}/{startIndex}",
-                defaults: new { controller = "Lek", action = "More", startIndex = 0, pageSize = 20 }
-                );
         }
     }
 }
